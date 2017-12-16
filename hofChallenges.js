@@ -72,10 +72,10 @@ myForEach(myArr, function(element, i) {
   console.log(element, i);
 });
 /*
-one
-two
-three
-four
+one, 0
+two, 1
+three, 2
+four, 3
 */
 
 // ----------------------------------------------
@@ -101,9 +101,5 @@ console.log(
   })
 );
 /**
- * 1
- * 4
- * 9
- * 16
- * 25
+ * (5) [1, 4, 9, 16, 25]
  */
