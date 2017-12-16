@@ -9,11 +9,11 @@ function closureCounter() {}
 closureCounter()() // 1
 closureCounter()() // 1
 var firstCounter = closureCounter();
+firstCounter(); // 1
 firstCounter(); // 2
-firstCounter(); // 3
 var secondCounter = closureCounter();
-secondCounter(); // 2
-firstCounter(); // 4
+secondCounter(); // 1
+firstCounter(); // 3
 
 /* 
 2. Write a function to act as a module (or API) using closure.
