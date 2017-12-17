@@ -6,8 +6,8 @@ over a 'count' variable that increments each time
 function closureCounter() {}
 
 // Tests for #1
-closureCounter()() // 1
-closureCounter()() // 1
+closureCounter()(); // 1
+closureCounter()(); // 1
 var firstCounter = closureCounter();
 firstCounter(); // 1
 firstCounter(); // 2
@@ -34,5 +34,5 @@ instance.addItem('taco');
 instance.getItemAt(0); // taco
 instance.addItem('burrito');
 instance.getAll(); // ['taco', 'burrito']
-instance.removeItemAt(0); // ['taco', 'burrito']
+instance.removeItemAt(0); // 'taco'
 instance.getAll(); // ['burrito']
