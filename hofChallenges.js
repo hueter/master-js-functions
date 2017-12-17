@@ -43,7 +43,7 @@ by default
 function higherOrderGreet() {
   return function(name = 'Stranger') {
     return 'hello ' + name;
-  }
+  };
 }
 
 // Tests for #3
