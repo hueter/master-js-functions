@@ -27,9 +27,9 @@ add10(10); // 20
 // ----------------------------------------------
 
 /* 
-3. Write a function that returns a greeting,
-that returns a function that takes a name OR just says "Stranger"
-by default
+3. Write a function that includes a greeting "Hello ",
+    and returns a function that takes a 'name' parameter
+     OR uses "Stranger" as a default
 */
 
 function higherOrderGreet() {}
