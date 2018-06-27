@@ -80,6 +80,8 @@ console.log(
  * (5) [1, 4, 9, 16, 25]
  */
 
+// ----------------------------------------------
+
 /**
   * 
   * 6. Write a function called customFilter which accepts an array and a callback function. The callback takes a two parameters called val (current element) and idx (current index) and return a boolean based on some comparison to the value.
@@ -89,10 +91,11 @@ Do not use the built in filter function, the tests will fail!
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
-Tests:
   */
 
 function customFilter(arr, callback) {}
+
+// tests for #6
 
 var arr = [1, 2, 3, 4, 5];
 
@@ -107,3 +110,5 @@ customFilter(['a', 1, '2', 3], function(val, idx) {
 customFilter([1, 2, 3, 4, 5], function(val, idx) {
   return typeof val === 'string';
 }); // []
+
+// ----------------------------------------------
