@@ -5,8 +5,8 @@ function higherOrderHelloWorld() {}
 
 // Tests for #1
 higherOrderHelloWorld()(); // hello world
-var higherOrderHelloWorld = higherOrderHelloWorld();
-higherOrderHelloWorld(); // hello world
+var helloWorld = higherOrderHelloWorld();
+helloWorld(); // hello world
 
 // ----------------------------------------------
 
@@ -43,16 +43,15 @@ greet('Adele'); // Hello Adele
 // ----------------------------------------------
 
 /* 
-*** BONUS ***
 4. Write a function that takes a callback to implement the
   forEach array method.
 */
 
-function myForEach(arr, callback) {}
+function customForEach(arr, callback) {}
 
 // test for #4
 var myArr = ['one', 'two', 'three', 'four'];
-myForEach(myArr, function(element, i) {
+customForEach(myArr, function(element, i) {
   console.log(element, i);
 });
 /*
@@ -65,19 +64,46 @@ four, 3
 // ----------------------------------------------
 
 /* 5. 
-*** BONUS ***
 Write a function that takes a callback to implement the
    forEach array method.
 */
-function myMap(arr, callback) {}
+function customMap(arr, callback) {}
 
 // test for #5
 var mySecondArr = [1, 2, 3, 4, 5];
 console.log(
-  myMap(mySecondArr, function(element, i) {
+  customMap(mySecondArr, function(element, i) {
     return element * element;
   })
 );
 /**
  * (5) [1, 4, 9, 16, 25]
  */
+
+/**
+  * 
+  * 6. Write a function called customFilter which accepts an array and a callback function. The callback takes a two parameters called val (current element) and idx (current index) and return a boolean based on some comparison to the value.
+
+The function should return an array of all values that pass the comparison test.
+Do not use the built in filter function, the tests will fail!
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+Tests:
+  */
+
+function customFilter(arr, callback) {}
+
+var arr = [1, 2, 3, 4, 5];
+
+customFilter(arr, function(val, idx) {
+  return val > 3;
+}); // [4,5]
+
+customFilter(['a', 1, '2', 3], function(val, idx) {
+  return typeof val === 'string';
+}); // ["a","2"]
+
+customFilter([1, 2, 3, 4, 5], function(val, idx) {
+  return typeof val === 'string';
+}); // []
